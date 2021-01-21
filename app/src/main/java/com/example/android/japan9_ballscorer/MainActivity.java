@@ -10,6 +10,8 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     String pocketedHistory = "";
+    String pointString = "";
+    int points = 0;
     String selectedPocket = "S";
 
     @Override
@@ -20,12 +22,26 @@ public class MainActivity extends AppCompatActivity {
 
     public void pocket5(View v) {
         pocketedHistory += "5" + selectedPocket;
-        displayPocketedHistory();
+        if (selectedPocket == "S") {
+            pointString += "X";
+            points += 2;
+        } else {
+            pointString += "|";
+            points += 1;
+        }
+        displayFrame();
     }
 
     public void pocket9(View v) {
         pocketedHistory += "9" + selectedPocket;
-        displayPocketedHistory();
+        if (selectedPocket == "S") {
+            pointString += "XX";
+            points += 4;
+        } else {
+            pointString += "X";
+            points += 2;
+        }
+        displayFrame();
     }
 
     public void updatePocket(View view) {
@@ -43,8 +59,24 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void displayFrame() {
+        displayPocketedHistory();
+        displayPointString();
+        displayRackScore();
+    }
+
     private void displayPocketedHistory() {
         TextView scoreView = findViewById(R.id.pocketed);
         scoreView.setText(String.valueOf(pocketedHistory));
+    }
+
+    private void displayPointString() {
+        TextView scoreView = findViewById(R.id.point_string);
+        scoreView.setText(String.valueOf(pointString));
+    }
+
+    private void displayRackScore() {
+        TextView scoreView = findViewById(R.id.rack_score);
+        scoreView.setText(String.valueOf(points));
     }
 }
