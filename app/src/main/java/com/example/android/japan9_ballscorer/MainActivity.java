@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     String pocketedHistory = "";
-    String selectedPocket = "";
+    String selectedPocket = "S";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

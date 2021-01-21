@@ -59,7 +59,8 @@
                         android:layout_height="wrap_content"
                         android:text="Side"
                         android:id="@+id/side"
-                        android:onClick="updatePocket" />
+                        android:onClick="updatePocket"
+                        android:checked="true" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
