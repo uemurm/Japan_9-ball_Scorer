@@ -36,38 +36,38 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
+                    android:onClick="pocket5"
                     android:text="❺"
-                    android:textSize="20dp"
-                    android:onClick="pocket5" />
+                    android:textSize="20dp" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
+                    android:onClick="pocket9"
                     android:text="❾"
-                    android:textSize="20dp"
-                    android:onClick="pocket9" />
+                    android:textSize="20dp" />
 
                 <RadioGroup
+                    android:id="@+id/select_pocket"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:id="@+id/select_pocket" >
+                    android:orientation="vertical">
 
                     <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Side"
                         android:id="@+id/side"
-                        android:onClick="updatePocket"
-                        android:checked="true" />
-
-                    <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Corner"
+                        android:checked="true"
+                        android:onClick="updatePocket"
+                        android:text="Side" />
+
+                    <RadioButton
                         android:id="@+id/corner"
-                        android:onClick="updatePocket" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="updatePocket"
+                        android:text="Corner" />
 
                 </RadioGroup>
 
@@ -77,11 +77,11 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/pocketed"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="pocketed"
-                        android:textAllCaps="true"
-                        android:id="@+id/pocketed" />
+                        android:textAllCaps="true" />
 
                     <TextView
                         android:layout_width="wrap_content"
