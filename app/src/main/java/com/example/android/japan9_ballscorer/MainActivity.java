@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    String pocketed = "";
+    String pocketedHistory = "";
+    String selectedPocket = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,12 +19,32 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void pocket5(View v) {
-        pocketed += "5";
-        displayPocketing();
+        pocketedHistory += "5" + selectedPocket;
+        displayPocketedHistory();
     }
 
-    private void displayPocketing() {
-        TextView scoreView = findViewById(R.id.pocketing);
-        scoreView.setText(String.valueOf(pocketed));
+    public void pocket9(View v) {
+        pocketedHistory += "9" + selectedPocket;
+        displayPocketedHistory();
+    }
+
+    public void updatePocket(View view) {
+        boolean checked = ((RadioButton) view).isChecked();
+
+        switch (view.getId()) {
+            case R.id.side:
+                if (checked)
+                    selectedPocket = "S";
+                break;
+            case R.id.corner:
+                if (checked)
+                    selectedPocket = "C";
+                break;
+        }
+    }
+
+    private void displayPocketedHistory() {
+        TextView scoreView = findViewById(R.id.pocketed);
+        scoreView.setText(String.valueOf(pocketedHistory));
     }
 }
