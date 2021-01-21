@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    String pocketing = "";
+    String pocketed = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,12 +17,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void pocket5(View v) {
-        pocketing += "5";
+        pocketed += "5";
         displayPocketing();
     }
 
     private void displayPocketing() {
         TextView scoreView = findViewById(R.id.pocketing);
-        scoreView.setText(String.valueOf(pocketing));
+        scoreView.setText(String.valueOf(pocketed));
     }
 }
