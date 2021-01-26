@@ -66,17 +66,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void displayPocketedHistory() {
-        TextView scoreView = findViewById(R.id.pocketed);
+        TextView scoreView = findViewById(R.id.pocketed0);
         scoreView.setText(String.valueOf(pocketedHistory));
     }
 
     private void displayPointString() {
-        TextView scoreView = findViewById(R.id.point_string);
+        TextView scoreView = findViewById(R.id.point_string0);
         scoreView.setText(String.valueOf(pointString));
     }
 
     private void displayRackScore() {
-        TextView scoreView = findViewById(R.id.rack_score);
+        TextView scoreView = findViewById(R.id.rack_score0);
         scoreView.setText(String.valueOf(points));
     }
 }

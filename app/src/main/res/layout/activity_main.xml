@@ -10,101 +10,193 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
 
-        <FrameLayout
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="山梨"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/pocketed0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pocketed"
+                android:textAllCaps="true" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="山梨"
-                    android:textSize="30dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/point_string0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="point_string"
+                android:textAllCaps="true" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:onClick="pocket5"
-                    android:text="❺"
-                    android:textSize="20dp" />
+            <TextView
+                android:id="@+id/rack_score0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="rack_score"
+                android:textAllCaps="true" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:onClick="pocket9"
-                    android:text="❾"
-                    android:textSize="20dp" />
-
-                <RadioGroup
-                    android:id="@+id/select_pocket"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <RadioButton
-                        android:id="@+id/side"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:checked="true"
-                        android:onClick="updatePocket"
-                        android:text="Side" />
-
-                    <RadioButton
-                        android:id="@+id/corner"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="updatePocket"
-                        android:text="Corner" />
-
-                </RadioGroup>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/pocketed"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="pocketed"
-                        android:textAllCaps="true" />
-
-                    <TextView
-                        android:id="@+id/point_string"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="point_string"
-                        android:textAllCaps="true" />
-
-                    <TextView
-                        android:id="@+id/rack_score"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="rack_score"
-                        android:textAllCaps="true" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="added_score"
-                        android:textAllCaps="true" />
-                </LinearLayout>
-            </TableRow>
-        </FrameLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="added_score0"
+                android:textAllCaps="true" />
+        </LinearLayout>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="植村"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pocketed1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pocketed"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:id="@+id/point_string1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="point_string"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:id="@+id/rack_score1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="rack_score"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="added_score1"
+                android:textAllCaps="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="鈴木"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pocketed2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pocketed"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:id="@+id/point_string2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="point_string"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:id="@+id/rack_score3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="rack_score"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="added_score3"
+                android:textAllCaps="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:onClick="pocket5"
+            android:text="❺"
+            android:textSize="20dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:onClick="pocket9"
+            android:text="❾"
+            android:textSize="20dp" />
+
+        <RadioGroup
+            android:id="@+id/select_pocket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/side"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:onClick="updatePocket"
+                android:text="Side" />
+
+            <RadioButton
+                android:id="@+id/corner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="updatePocket"
+                android:text="Corner" />
+
+        </RadioGroup>
+    </LinearLayout>
 </LinearLayout>
