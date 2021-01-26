@@ -8,6 +8,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    Board board;
 
     String pocketedHistory = "";
     String pointString = "";
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        board = new Board();
     }
 
     public void pocket5(View v) {
@@ -42,6 +45,28 @@ public class MainActivity extends AppCompatActivity {
             points += 2;
         }
         displayFrame();
+    }
+
+    public void setCurrentPlayer(View view) {
+        int player = 0;
+        boolean checked = ((RadioButton) view).isChecked();
+
+        switch (view.getId()) {
+            case R.id.player0:
+                if (checked)
+                    player = 0;
+                break;
+            case R.id.player1:
+                if (checked)
+                    player = 1;
+                break;
+            case R.id.player2:
+                if (checked)
+                    player = 2;
+                break;
+        }
+
+        board.setCurrentPlayer(player);
     }
 
     public void updatePocket(View view) {
