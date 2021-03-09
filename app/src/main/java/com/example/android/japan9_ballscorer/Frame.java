@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.widget.TextView;
 
 public class Frame {
-    private String pocketedHistory;
+    private String pocketHistory;
     private int points;
     private String pointString;
     private int rackScore;
@@ -13,7 +13,7 @@ public class Frame {
     private Activity activity;
 
     public Frame(Activity activity) {
-        pocketedHistory = "";
+        pocketHistory = "";
         points = 0;
         pointString = "";
         rackScore = 0;
@@ -23,9 +23,9 @@ public class Frame {
     }
 
     public void pocket(int ballNumber, String pocketType) {
-        pocketedHistory += String.valueOf(ballNumber) + pocketType;
-        TextView scoreView = (TextView) activity.findViewById(R.id.pocketed0);
-        scoreView.setText(String.valueOf(pocketedHistory));
+        pocketHistory += String.valueOf(ballNumber) + pocketType;
+        TextView scoreView = (TextView) activity.findViewById(R.id.pocket_history0);
+        scoreView.setText(String.valueOf(pocketHistory));
 
         switch (ballNumber) {
             case 5:

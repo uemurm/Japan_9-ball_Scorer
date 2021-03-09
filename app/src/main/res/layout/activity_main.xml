@@ -35,7 +35,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/pocketed0"
+                android:id="@+id/pocket_history0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="pocketed"
@@ -89,7 +89,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/pocketed1"
+                android:id="@+id/pocket_history1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="pocketed"
@@ -143,7 +143,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/pocketed2"
+                android:id="@+id/pocket_history2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="pocketed"
