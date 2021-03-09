@@ -13,38 +13,22 @@ public class MainActivity extends AppCompatActivity {
     String pocketedHistory = "";
     String pointString = "";
     int points = 0;
-    String selectedPocket = "S";
+    String pocketType = "S";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        board = new Board();
+        board = new Board(this);
     }
 
     public void pocket5(View v) {
-        pocketedHistory += "5" + selectedPocket;
-        if (selectedPocket == "S") {
-            pointString += "X";
-            points += 2;
-        } else {
-            pointString += "|";
-            points += 1;
-        }
-        displayFrame();
+        board.pocket(5, pocketType);
     }
 
     public void pocket9(View v) {
-        pocketedHistory += "9" + selectedPocket;
-        if (selectedPocket == "S") {
-            pointString += "XX";
-            points += 4;
-        } else {
-            pointString += "X";
-            points += 2;
-        }
-        displayFrame();
+        board.pocket(9, pocketType);
     }
 
     public void setCurrentPlayer(View view) {
@@ -75,33 +59,12 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.side:
                 if (checked)
-                    selectedPocket = "S";
+                    pocketType = "S";
                 break;
             case R.id.corner:
                 if (checked)
-                    selectedPocket = "C";
+                    pocketType = "C";
                 break;
         }
-    }
-
-    private void displayFrame() {
-        displayPocketedHistory();
-        displayPointString();
-        displayRackScore();
-    }
-
-    private void displayPocketedHistory() {
-        TextView scoreView = findViewById(R.id.pocketed0);
-        scoreView.setText(String.valueOf(pocketedHistory));
-    }
-
-    private void displayPointString() {
-        TextView scoreView = findViewById(R.id.point_string0);
-        scoreView.setText(String.valueOf(pointString));
-    }
-
-    private void displayRackScore() {
-        TextView scoreView = findViewById(R.id.rack_score0);
-        scoreView.setText(String.valueOf(points));
     }
 }

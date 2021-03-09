@@ -1,9 +1,19 @@
 package com.example.android.japan9_ballscorer;
 
-public class Rack {
-    private Frame[] frames;
+import android.app.Activity;
 
-    public Rack() {
-        frames = new Frame[3];
+public class Rack {
+    private Frame frames[];
+
+    public Rack(Activity activity) {
+        frames = new Frame[] {
+                new Frame(activity),
+                new Frame(activity),
+                new Frame(activity),
+        };
+    }
+
+    public void pocket(int ballNumber, String pocketType, int player) {
+        frames[player].pocket(ballNumber, pocketType);
     }
 }
