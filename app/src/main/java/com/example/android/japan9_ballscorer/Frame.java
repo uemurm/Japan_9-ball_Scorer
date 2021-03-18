@@ -9,24 +9,38 @@ public class Frame {
     private int rackScore;
     private int addedScore;
 
-    private Activity activity;
+    private int frameIndex;
 
-    public Frame(Activity activity) {
+    private Activity activity;
+    private TextView[] rackScoreViews;
+
+    public Frame(int frameIndex, Activity activity, TextView[] rackScoreViews) {
         pocketHistory = "";
         pointString = "";
         rackScore = 0;
         addedScore = 0;
 
+        this.frameIndex = frameIndex;
         this.activity = activity;
+        this.rackScoreViews = rackScoreViews;
     }
 
     public void updateScore(int n) {
         rackScore += n;
-
-        TextView rackScoreView = (TextView) activity.findViewById(R.id.rack_score0);
+        TextView rackScoreView = rackScoreViews[frameIndex];
         rackScoreView.setText(String.valueOf(rackScore));
+
+        addedScore += n;
+        TextView addedScoreView = (TextView) activity.findViewById(R.id.added_score0);
+        addedScoreView.setText(String.valueOf(addedScore));
     }
 
+    /**
+     * Invoked when a player pockets a ball.
+     * @param ballNumber
+     * @param pocketType
+     * @return points that the player should get from other players respectively.
+     */
     public int pocket(int ballNumber, String pocketType) {
         int points;
 
