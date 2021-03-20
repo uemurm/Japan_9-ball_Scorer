@@ -13,8 +13,12 @@ public class Frame {
 
     private Activity activity;
     private TextView[] rackScoreViews;
+    private TextView[] addedScoreViews;
 
-    public Frame(int frameIndex, Activity activity, TextView[] rackScoreViews) {
+    public Frame(int frameIndex, Activity activity,
+                 TextView[] rackScoreViews,
+                 TextView[] addedScoreViews
+    ) {
         pocketHistory = "";
         pointString = "";
         rackScore = 0;
@@ -23,6 +27,7 @@ public class Frame {
         this.frameIndex = frameIndex;
         this.activity = activity;
         this.rackScoreViews = rackScoreViews;
+        this.addedScoreViews = addedScoreViews;
     }
 
     public void updateScore(int n) {
@@ -31,7 +36,7 @@ public class Frame {
         rackScoreView.setText(String.valueOf(rackScore));
 
         addedScore += n;
-        TextView addedScoreView = (TextView) activity.findViewById(R.id.added_score0);
+        TextView addedScoreView = addedScoreViews[frameIndex];
         addedScoreView.setText(String.valueOf(addedScore));
     }
 

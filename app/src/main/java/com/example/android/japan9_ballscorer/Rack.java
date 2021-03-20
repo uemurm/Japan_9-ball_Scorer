@@ -14,9 +14,9 @@ public class Rack {
         this.activity = activity;
 
         frames = new ArrayList<>();
-        frames.add(new Frame(0, activity, rackScoreViews()));
-        frames.add(new Frame(1, activity, rackScoreViews()));
-        frames.add(new Frame(2, activity, rackScoreViews()));
+        frames.add(new Frame(0, activity, rackScoreViews(), addedScoreViews()));
+        frames.add(new Frame(1, activity, rackScoreViews(), addedScoreViews()));
+        frames.add(new Frame(2, activity, rackScoreViews(), addedScoreViews()));
     }
 
     public void pocket(int ballNumber, String pocketType, int playerNumber) {
@@ -38,6 +38,15 @@ public class Rack {
         views[0] = (TextView) activity.findViewById(R.id.rack_score0);
         views[1] = (TextView) activity.findViewById(R.id.rack_score1);
         views[2] = (TextView) activity.findViewById(R.id.rack_score2);
+
+        return views;
+    }
+
+    private TextView[] addedScoreViews() {
+        TextView[] views = new TextView[3];
+        views[0] = (TextView) activity.findViewById(R.id.added_score0);
+        views[1] = (TextView) activity.findViewById(R.id.added_score1);
+        views[2] = (TextView) activity.findViewById(R.id.added_score2);
 
         return views;
     }
