@@ -9,13 +9,13 @@ public class Frame {
     private int rackScore;
     private int addedScore;
 
-    private int frameIndex;
+    private int playerNumber;
 
     private Activity activity;
     private TextView[] rackScoreViews;
     private TextView[] addedScoreViews;
 
-    public Frame(int frameIndex, Activity activity,
+    public Frame(int playerNumber, Activity activity,
                  TextView[] rackScoreViews,
                  TextView[] addedScoreViews
     ) {
@@ -24,7 +24,7 @@ public class Frame {
         rackScore = 0;
         addedScore = 0;
 
-        this.frameIndex = frameIndex;
+        this.playerNumber = playerNumber;
         this.activity = activity;
         this.rackScoreViews = rackScoreViews;
         this.addedScoreViews = addedScoreViews;
@@ -32,11 +32,11 @@ public class Frame {
 
     public void updateScore(int n) {
         rackScore += n;
-        TextView rackScoreView = rackScoreViews[frameIndex];
+        TextView rackScoreView = rackScoreViews[playerNumber];
         rackScoreView.setText(String.valueOf(rackScore));
 
         addedScore += n;
-        TextView addedScoreView = addedScoreViews[frameIndex];
+        TextView addedScoreView = addedScoreViews[playerNumber];
         addedScoreView.setText(String.valueOf(addedScore));
     }
 
