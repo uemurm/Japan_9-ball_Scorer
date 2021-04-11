@@ -11,23 +11,22 @@ public class Frame {
 
     private int playerNumber;
 
-    private Activity activity;
+    private TextView[] pocketHistoryViews;
+    private TextView[] pointStringViews;
     private TextView[] rackScoreViews;
     private TextView[] addedScoreViews;
 
-    public Frame(int playerNumber, Activity activity,
-                 TextView[] rackScoreViews,
-                 TextView[] addedScoreViews
-    ) {
+    public Frame(int playerNumber, FrameTextView frameTextView) {
         pocketHistory = "";
         pointString = "";
         rackScore = 0;
         addedScore = 0;
 
         this.playerNumber = playerNumber;
-        this.activity = activity;
-        this.rackScoreViews = rackScoreViews;
-        this.addedScoreViews = addedScoreViews;
+        this.pocketHistoryViews = frameTextView.getPocketHistoryViews();
+        this.pointStringViews = frameTextView.getPointStringViews();
+        this.rackScoreViews = frameTextView.getRackScoreViews();
+        this.addedScoreViews = frameTextView.getAddedScoreViews();
     }
 
     public void updateScore(int n) {
@@ -50,8 +49,7 @@ public class Frame {
         int points;
 
         pocketHistory += String.valueOf(ballNumber) + pocketType;
-        TextView scoreView = (TextView) activity.findViewById(R.id.pocket_history0);
-        scoreView.setText(String.valueOf(pocketHistory));
+        pocketHistoryViews[playerNumber].setText(String.valueOf(pocketHistory));
 
         switch (ballNumber) {
             case 5:
@@ -65,8 +63,7 @@ public class Frame {
             default:
                 points = 0;
         }
-        TextView pointStrView = (TextView) activity.findViewById(R.id.point_string0);
-        pointStrView.setText(String.valueOf(pointString));
+        pointStringViews[playerNumber].setText(String.valueOf(pointString));
 
         return points;
     }
