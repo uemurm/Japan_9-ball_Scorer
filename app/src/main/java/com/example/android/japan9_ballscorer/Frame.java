@@ -1,6 +1,5 @@
 package com.example.android.japan9_ballscorer;
 
-import android.app.Activity;
 import android.widget.TextView;
 
 public class Frame {

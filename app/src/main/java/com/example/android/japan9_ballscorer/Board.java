@@ -11,8 +11,8 @@ public class Board {
         currentPlayer = 0;
     }
 
-    public void setCurrentPlayer(int n) {
-        currentPlayer = n;
+    public void nextPlayer() {
+        currentPlayer = (currentPlayer + 1) % 3;
     }
 
     public void pocket(int ballNumber, String pocketType) {

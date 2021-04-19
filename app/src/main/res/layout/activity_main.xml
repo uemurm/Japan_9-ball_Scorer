@@ -13,12 +13,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:id="@+id/player0" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -82,11 +76,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/player1" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -149,11 +138,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/player2" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -210,6 +194,13 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="nextPlayer"
+        android:text="Next Player"
+        android:textSize="20dp" />
 
     <LinearLayout
         android:layout_width="match_parent"

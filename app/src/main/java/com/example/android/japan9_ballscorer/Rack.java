@@ -1,8 +1,6 @@
 package com.example.android.japan9_ballscorer;
 
 import android.app.Activity;
-import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.List;
 
