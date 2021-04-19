@@ -32,14 +32,12 @@
                 android:id="@+id/pocket_history0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="pocketed"
                 android:textAllCaps="true" />
 
             <TextView
                 android:id="@+id/point_string0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="point_string"
                 android:textAllCaps="true" />
 
             <LinearLayout
@@ -51,7 +49,7 @@
                     android:id="@+id/rack_score0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="rack_score"
+                    android:text="0"
                     android:textAllCaps="true" />
 
                 <TextView
@@ -64,7 +62,7 @@
                     android:id="@+id/added_score0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="added_score0"
+                    android:text="0"
                     android:textAllCaps="true" />
 
             </LinearLayout>
@@ -95,14 +93,12 @@
                 android:id="@+id/pocket_history1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="pocketed"
                 android:textAllCaps="true" />
 
             <TextView
                 android:id="@+id/point_string1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="point_string"
                 android:textAllCaps="true" />
 
             <LinearLayout
@@ -114,7 +110,7 @@
                     android:id="@+id/rack_score1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="rack_score1"
+                    android:text="0"
                     android:textAllCaps="true" />
 
                 <TextView
@@ -126,7 +122,7 @@
                     android:id="@+id/added_score1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="added_score1"
+                    android:text="0"
                     android:textAllCaps="true" />
 
             </LinearLayout>
@@ -157,14 +153,12 @@
                 android:id="@+id/pocket_history2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="pocketed"
                 android:textAllCaps="true" />
 
             <TextView
                 android:id="@+id/point_string2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="point_string"
                 android:textAllCaps="true" />
 
             <LinearLayout
@@ -176,7 +170,7 @@
                     android:id="@+id/rack_score2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="rack_score2"
+                    android:text="0"
                     android:textAllCaps="true" />
 
                 <TextView
@@ -188,7 +182,7 @@
                     android:id="@+id/added_score2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="added_score2"
+                    android:text="0"
                     android:textAllCaps="true" />
 
             </LinearLayout>
