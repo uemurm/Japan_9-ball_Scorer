@@ -2,6 +2,8 @@ package com.example.android.japan9_ballscorer;
 
 import android.widget.TextView;
 
+import java.util.List;
+
 public class Frame {
     private String pocketHistory;
     private String pointString;
@@ -10,10 +12,10 @@ public class Frame {
 
     private int playerNumber;
 
-    private TextView[] pocketHistoryViews;
-    private TextView[] pointStringViews;
-    private TextView[] rackScoreViews;
-    private TextView[] addedScoreViews;
+    private List<TextView> pocketHistoryViews;
+    private List<TextView> pointStringViews;
+    private List<TextView> rackScoreViews;
+    private List<TextView> addedScoreViews;
 
     public Frame(int playerNumber, FrameTextView frameTextView) {
         pocketHistory = "";
@@ -30,11 +32,11 @@ public class Frame {
 
     public void updateScore(int n) {
         rackScore += n;
-        TextView rackScoreView = rackScoreViews[playerNumber];
+        TextView rackScoreView = rackScoreViews.get(playerNumber);
         rackScoreView.setText(String.valueOf(rackScore));
 
         addedScore += n;
-        TextView addedScoreView = addedScoreViews[playerNumber];
+        TextView addedScoreView = addedScoreViews.get(playerNumber);
         addedScoreView.setText(String.valueOf(addedScore));
     }
 
@@ -48,7 +50,8 @@ public class Frame {
         int points;
 
         pocketHistory += String.valueOf(ballNumber) + pocketType;
-        pocketHistoryViews[playerNumber].setText(String.valueOf(pocketHistory));
+        pocketHistoryViews.get(playerNumber)
+                          .setText(String.valueOf(pocketHistory));
 
         switch (ballNumber) {
             case 5:
@@ -62,7 +65,7 @@ public class Frame {
             default:
                 points = 0;
         }
-        pointStringViews[playerNumber].setText(String.valueOf(pointString));
+        pointStringViews.get(playerNumber).setText(String.valueOf(pointString));
 
         return points;
     }

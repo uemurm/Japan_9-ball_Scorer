@@ -3,49 +3,81 @@ package com.example.android.japan9_ballscorer;
 import android.app.Activity;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FrameTextView {
     private Activity activity;
+    private final int playerCount = 3;
 
     public FrameTextView(Activity activity) {
         this.activity = activity;
     }
 
-    public TextView[] getPocketHistoryViews() {
-        TextView[] views = new TextView[3];
+    public List<TextView> getPocketHistoryViews() {
+        List<TextView> views = new ArrayList<>();
 
-        views[0] = (TextView) activity.findViewById(R.id.pocket_history0);
-        views[1] = (TextView) activity.findViewById(R.id.pocket_history1);
-        views[2] = (TextView) activity.findViewById(R.id.pocket_history2);
-
-        return views;
-    }
-
-    public TextView[] getPointStringViews() {
-        TextView[] views = new TextView[3];
-
-        views[0] = (TextView) activity.findViewById(R.id.point_string0);
-        views[1] = (TextView) activity.findViewById(R.id.point_string1);
-        views[2] = (TextView) activity.findViewById(R.id.point_string2);
+        for (int i = 0; i < playerCount; i++) {
+            int viewId;
+            viewId = activity.getResources()
+                             .getIdentifier(
+                                     "pocket_history" + Integer.toString(i),
+                                     "id",
+                                     "com.example.android.japan9_ballscorer"
+                             );
+            views.add((TextView) activity.findViewById(viewId));
+        }
 
         return views;
     }
 
-    public TextView[] getRackScoreViews() {
-        TextView[] views = new TextView[3];
+    public List<TextView> getPointStringViews() {
+        List<TextView> views = new ArrayList<>();
 
-        views[0] = (TextView) activity.findViewById(R.id.rack_score0);
-        views[1] = (TextView) activity.findViewById(R.id.rack_score1);
-        views[2] = (TextView) activity.findViewById(R.id.rack_score2);
+        for (int i = 0; i < playerCount; i++) {
+            int viewId;
+            viewId = activity.getResources()
+                             .getIdentifier(
+                                     "point_string" + Integer.toString(i),
+                                     "id",
+                                     "com.example.android.japan9_ballscorer"
+                             );
+            views.add((TextView) activity.findViewById(viewId));
+        }
 
         return views;
     }
 
-    public TextView[] getAddedScoreViews() {
-        TextView[] views = new TextView[3];
+    public List<TextView> getRackScoreViews() {
+        List<TextView> views = new ArrayList<>();
 
-        views[0] = (TextView) activity.findViewById(R.id.added_score0);
-        views[1] = (TextView) activity.findViewById(R.id.added_score1);
-        views[2] = (TextView) activity.findViewById(R.id.added_score2);
+        for (int i = 0; i < playerCount; i++) {
+            int viewId;
+            viewId = activity.getResources()
+                    .getIdentifier(
+                            "rack_score" + Integer.toString(i),
+                            "id",
+                            "com.example.android.japan9_ballscorer"
+                    );
+            views.add((TextView) activity.findViewById(viewId));
+        }
+
+        return views;
+    }
+
+    public List<TextView> getAddedScoreViews() {
+        List<TextView> views = new ArrayList<>();
+
+        for (int i = 0; i < playerCount; i++) {
+            int viewId;
+            viewId = activity.getResources()
+                    .getIdentifier(
+                            "added_score" + Integer.toString(i),
+                            "id",
+                            "com.example.android.japan9_ballscorer"
+                    );
+            views.add((TextView) activity.findViewById(viewId));
+        }
 
         return views;
     }
