@@ -10,19 +10,12 @@ public class Board {
     private int currentRack;
     private int currentPlayer;
 
-    public Board(Activity a) {
+    public Board(Players players, Activity activity) {
         racks = new ArrayList<>();
-        racks.add(new Rack(a));
-        racks.add(new Rack(a));
+        racks.add(new Rack(activity));
+        racks.add(new Rack(activity));
 
-        players = new Players(a);
-        players.add(new Player("山梨"));
-        players.add(new Player("植村"));
-        players.add(new Player("鈴木"));
-
-        players.getNameTextViews().get(0).setText("山梨");
-        players.getNameTextViews().get(1).setText("植村");
-        players.getNameTextViews().get(2).setText("鈴木");
+        this.players = players;
         currentRack = 0;
         currentPlayer = 0;
     }

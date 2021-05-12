@@ -20,7 +20,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        board = new Board(this);
+        Players players = new Players(this);
+        players.add(new Player("山梨"));
+        players.add(new Player("植村"));
+        players.add(new Player("鈴木"));
+
+        board = new Board(players, this);
     }
 
     public void nextPlayer(View v) {

@@ -29,4 +29,22 @@ public class Players extends ArrayList {
 
         return views;
     }
+
+    @Override
+    public boolean add(Object o) {
+        boolean ret = super.add(o);
+
+        int idx = this.size() - 1;
+        String name = this.get(idx).getName();
+        TextView nameTextView = getNameTextViews().get(idx);
+        nameTextView.setTextSize(30);
+        nameTextView.setText(name);
+
+        return ret;
+    }
+
+    @Override
+    public Player get(int index) {
+        return (Player) super.get(index);
+    }
 }
