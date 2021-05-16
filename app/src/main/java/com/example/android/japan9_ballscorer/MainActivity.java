@@ -36,8 +36,10 @@ public class MainActivity extends AppCompatActivity {
         switch (v.getId()) {
             case R.id.ball5:
                 board.pocket(5, pocketType);
+                break;
             case R.id.ball9:
                 board.pocket(9, pocketType);
+                break;
         }
     }
 
