@@ -28,13 +28,13 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/pocket_history0"
+                android:id="@+id/pocket_history0_0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAllCaps="true" />
 
             <TextView
-                android:id="@+id/point_string0"
+                android:id="@+id/point_string0_0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAllCaps="true" />
@@ -45,7 +45,7 @@
                 android:orientation="horizontal" >
 
                 <TextView
-                    android:id="@+id/rack_score0"
+                    android:id="@+id/rack_score0_0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -58,7 +58,52 @@
                     android:textAllCaps="true" />
 
                 <TextView
-                    android:id="@+id/added_score0"
+                    android:id="@+id/added_score0_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textAllCaps="true" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pocket_history1_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:id="@+id/point_string1_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/rack_score1_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:id="@+id/added_score1_0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -88,13 +133,13 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/pocket_history1"
+                android:id="@+id/pocket_history0_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAllCaps="true" />
 
             <TextView
-                android:id="@+id/point_string1"
+                android:id="@+id/point_string0_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAllCaps="true" />
@@ -105,7 +150,7 @@
                 android:orientation="horizontal" >
 
                 <TextView
-                    android:id="@+id/rack_score1"
+                    android:id="@+id/rack_score0_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -117,7 +162,51 @@
                     android:text="/" />
 
                 <TextView
-                    android:id="@+id/added_score1"
+                    android:id="@+id/added_score0_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textAllCaps="true" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pocket_history1_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:id="@+id/point_string1_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/rack_score1_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/" />
+
+                <TextView
+                    android:id="@+id/added_score1_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -147,13 +236,13 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/pocket_history2"
+                android:id="@+id/pocket_history0_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAllCaps="true" />
 
             <TextView
-                android:id="@+id/point_string2"
+                android:id="@+id/point_string0_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAllCaps="true" />
@@ -164,7 +253,7 @@
                 android:orientation="horizontal" >
 
                 <TextView
-                    android:id="@+id/rack_score2"
+                    android:id="@+id/rack_score0_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -176,7 +265,51 @@
                     android:text="/" />
 
                 <TextView
-                    android:id="@+id/added_score2"
+                    android:id="@+id/added_score0_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textAllCaps="true" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pocket_history1_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:id="@+id/point_string1_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/rack_score1_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/" />
+
+                <TextView
+                    android:id="@+id/added_score1_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"

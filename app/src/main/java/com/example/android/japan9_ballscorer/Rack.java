@@ -8,7 +8,7 @@ public class Rack {
     private List<Frame> frames;
 
     public Rack(int playerCount, Activity activity) {
-        FrameTextView frameTextView = new FrameTextView(activity);
+        FrameTextView frameTextView = new FrameTextView(playerCount, activity);
 
         frames = new ArrayList<>();
         for (int i = 0; i < playerCount; i++) {

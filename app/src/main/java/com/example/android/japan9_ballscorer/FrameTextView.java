@@ -8,10 +8,11 @@ import java.util.List;
 
 public class FrameTextView {
     private Activity activity;
-    private final int playerCount = 3;
+    private int playerCount;
 
-    public FrameTextView(Activity activity) {
+    public FrameTextView(int playerCount, Activity activity) {
         this.activity = activity;
+        this.playerCount = playerCount;
     }
 
     public List<TextView> getPocketHistoryViews() {
@@ -29,6 +30,20 @@ public class FrameTextView {
         }
 
         return views;
+    }
+
+    public TextView getPocketHistoryView(int rack, int player) {
+        int viewId;
+        viewId = activity.getResources()
+                .getIdentifier(
+                        "pocket_history" +
+                                Integer.toString(rack) + "_" +
+                                Integer.toString(player),
+                        "id",
+                        "com.example.android.japan9_ballscorer"
+                );
+
+        return (TextView) activity.findViewById(viewId);
     }
 
     public List<TextView> getPointStringViews() {
