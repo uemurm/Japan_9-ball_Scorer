@@ -32,12 +32,13 @@ public class MainActivity extends AppCompatActivity {
         board.nextPlayer();
     };
 
-    public void pocket5(View v) {
-        board.pocket(5, pocketType);
-    }
-
-    public void pocket9(View v) {
-        board.pocket(9, pocketType);
+    public void pocket(View v) {
+        switch (v.getId()) {
+            case R.id.ball5:
+                board.pocket(5, pocketType);
+            case R.id.ball9:
+                board.pocket(9, pocketType);
+        }
     }
 
     public void updatePocket(View view) {

@@ -199,18 +199,20 @@
         android:orientation="horizontal" >
 
         <Button
+            android:id="@+id/ball5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:onClick="pocket5"
+            android:onClick="pocket"
             android:text="❺"
             android:textSize="20dp" />
 
         <Button
+            android:id="@+id/ball9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:onClick="pocket9"
+            android:onClick="pocket"
             android:text="❾"
             android:textSize="20dp" />
 
