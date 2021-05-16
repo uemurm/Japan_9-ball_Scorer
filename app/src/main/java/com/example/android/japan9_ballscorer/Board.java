@@ -12,8 +12,8 @@ public class Board {
 
     public Board(Players players, Activity activity) {
         racks = new ArrayList<>();
-        racks.add(new Rack(players.size(), activity));
-        racks.add(new Rack(players.size(), activity));
+        racks.add(new Rack(0, players.size(), activity));
+        racks.add(new Rack(1, players.size(), activity));
 
         this.players = players;
         currentRack = 0;

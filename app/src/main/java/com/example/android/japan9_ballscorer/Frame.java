@@ -1,43 +1,32 @@
 package com.example.android.japan9_ballscorer;
 
-import android.widget.TextView;
-
-import java.util.List;
-
 public class Frame {
     private String pocketHistory;
     private String pointString;
     private int rackScore;
     private int addedScore;
 
-    private int playerNumber;
+    private FrameTextView v;
 
-    private List<TextView> pocketHistoryViews;
-    private List<TextView> pointStringViews;
-    private List<TextView> rackScoreViews;
-    private List<TextView> addedScoreViews;
-
-    public Frame(int playerNumber, FrameTextView frameTextView) {
+    public Frame(FrameTextView v) {
         pocketHistory = "";
         pointString = "";
         rackScore = 0;
         addedScore = 0;
 
-        this.playerNumber = playerNumber;
-        this.pocketHistoryViews = frameTextView.getPocketHistoryViews();
-        this.pointStringViews = frameTextView.getPointStringViews();
-        this.rackScoreViews = frameTextView.getRackScoreViews();
-        this.addedScoreViews = frameTextView.getAddedScoreViews();
+        this.v = v;
     }
 
+    /**
+     * Update rack score and added score when someone pockets a point ball.
+     * @param n
+     */
     public void updateScore(int n) {
         rackScore += n;
-        TextView rackScoreView = rackScoreViews.get(playerNumber);
-        rackScoreView.setText(String.valueOf(rackScore));
+        v.getRackScore().setText(String.valueOf(rackScore));
 
         addedScore += n;
-        TextView addedScoreView = addedScoreViews.get(playerNumber);
-        addedScoreView.setText(String.valueOf(addedScore));
+        v.getAddedScore().setText(String.valueOf(addedScore));
     }
 
     /**
@@ -50,8 +39,7 @@ public class Frame {
         int points;
 
         pocketHistory += String.valueOf(ballNumber) + pocketType;
-        pocketHistoryViews.get(playerNumber)
-                          .setText(String.valueOf(pocketHistory));
+        v.getPocketHistory().setText(String.valueOf(pocketHistory));
 
         switch (ballNumber) {
             case 5:
@@ -65,7 +53,7 @@ public class Frame {
             default:
                 points = 0;
         }
-        pointStringViews.get(playerNumber).setText(String.valueOf(pointString));
+        v.getPointString().setText(String.valueOf(pointString));
 
         return points;
     }
