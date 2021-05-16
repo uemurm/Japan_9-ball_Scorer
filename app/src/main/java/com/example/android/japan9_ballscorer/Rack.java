@@ -7,13 +7,13 @@ import java.util.List;
 public class Rack {
     private List<Frame> frames;
 
-    public Rack(Activity activity) {
+    public Rack(int playerCount, Activity activity) {
         FrameTextView frameTextView = new FrameTextView(activity);
 
         frames = new ArrayList<>();
-        frames.add(new Frame(0, frameTextView));
-        frames.add(new Frame(1, frameTextView));
-        frames.add(new Frame(2, frameTextView));
+        for (int i = 0; i < playerCount; i++) {
+            frames.add(new Frame(i, frameTextView));
+        }
     }
 
     public void pocket(int ballNumber, String pocketType, int playerNumber) {
