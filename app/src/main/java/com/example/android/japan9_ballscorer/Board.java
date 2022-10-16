@@ -30,6 +30,10 @@ public class Board {
         }
         currentPlayer = (currentPlayer + 1) % players.size();
 
+        emphasizeCurrentPlayerName(currentPlayer);
+    }
+
+    private void emphasizeCurrentPlayerName(int currentPlayer) {
         for (int i = 0; i < players.size(); i++) {
             if (i == currentPlayer) {
                 players.getNameTextViews().get(i).setTextSize(40);
