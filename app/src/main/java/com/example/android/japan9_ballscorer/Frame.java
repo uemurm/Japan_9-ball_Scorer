@@ -1,5 +1,8 @@
 package com.example.android.japan9_ballscorer;
 
+/**
+ * A frame records events when a player gets his/her turn until next player gets the turn.
+ */
 public class Frame {
     private String pocketHistory;
     private String pointString;

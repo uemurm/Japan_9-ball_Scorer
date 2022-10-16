@@ -5,6 +5,9 @@ import android.app.Activity;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A board has all the information about a set of racks.
+ */
 public class Board {
     private List<Rack> racks;
     private Players players;

@@ -5,6 +5,10 @@ import android.app.Activity;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A rack covers from a break shot until all the balls up to 9 are pocketed.
+ * It consists of a frame multiplied by the number of players.
+ */
 public class Rack {
     private List<Frame> frames;
 
